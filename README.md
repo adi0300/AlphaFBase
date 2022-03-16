@@ -1,3 +1,6 @@
+![companie](https://user-images.githubusercontent.com/80636845/158665266-425b52c7-28d8-4cb6-ba4f-fc840d9e782d.jpeg)
+
+
 # AlphaFBase
 
 ## General Description
@@ -18,3 +21,4 @@ Frontend: Angular / ReactJS
 Backend: Spring Boot / Node.js
 
 Databases: SQL / MongoDB
+
