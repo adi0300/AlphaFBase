@@ -1,19 +1,17 @@
-import logocompanie from "./img/logo_companie.jpeg";
-import logosite from "./img/logo_site.jpeg";
 import "./App.css";
 import Footer from "./components/Footer";
 import MainNavBar from "./components/MainNavBar";
+import { Routes } from 'react-router-dom';
+import { Route } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div>
       <MainNavBar />
-      <header className="App-header">
-        <h3>Logo companie</h3>
-        <img src={logocompanie} className="App-logo" alt="logocompanie" />
-        <h3>Logo site</h3>
-        <img src={logosite} className="App-logo" alt="logosite" />
-      </header>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+      </Routes>
       <Footer />
     </div>
   );

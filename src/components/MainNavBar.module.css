@@ -21,6 +21,15 @@
     margin-left: 3rem;
 }
 
+.header a{
+    text-decoration: none;
+    color: grey;
+}
+
+.header a:hover{
+    color: #E87121;
+}
+
 .logo{
     width: 400px;
     height: 400px;
