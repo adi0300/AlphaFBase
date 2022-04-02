@@ -1,4 +1,4 @@
-import logosite from '../logo_site_transparent.png';
+import logosite from '../img/logo_site_transparent.png';
 import classes from './MainNavBar.module.css';
 
 function MainNavBar(){

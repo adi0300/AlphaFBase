@@ -1,5 +1,5 @@
-import logocompanie from "./logo_companie.jpeg";
-import logosite from "./logo_site.jpeg";
+import logocompanie from "./img/logo_companie.jpeg";
+import logosite from "./img/logo_site.jpeg";
 import "./App.css";
 import Footer from "./components/Footer";
 import MainNavBar from "./components/MainNavBar";
