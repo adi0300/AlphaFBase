@@ -1,0 +1,11 @@
+.ul{
+    color: #E87121;
+    font-family: sans-serif;
+    
+    width: 546px;
+    height:294px;
+    border-radius: 20px;
+    border-color: black;
+    border-width: 3px;
+    border-style: ridge;
+}
