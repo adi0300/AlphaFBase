@@ -1,6 +1,6 @@
 import logosite from '../img/logo_site_transparent.png';
 import classes from './MainNavBar.module.css';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 function MainNavBar(){
     return(
@@ -8,12 +8,28 @@ function MainNavBar(){
         <nav>
             <ul className={classes.navright}>
             <li>
-                <Link to="/">Home</Link>
+                <NavLink
+                to="/"
+                style={({ isActive }) => 
+                (isActive ? {background: 'rgba(232,113,33,.4)'} : {background: 'white'}
+                )}
+                >
+                    HOME
+                </NavLink>
             </li>
-            <li>Services</li>
+            <li>
+            <NavLink
+                to="/services"
+                style={({ isActive }) => 
+                (isActive ? {background: 'rgba(232,113,33,.4)'} : {background: 'white'}
+                )}
+                >
+                    SERVICES
+                </NavLink>
+            </li>
             <img src={logosite} className={classes.logo} alt="logosite" />
-            <li>Login</li>
-            <li>Contact</li>
+            <li>LOGIN</li>
+            <li>CONTACT</li>
             </ul>
         </nav>
         </header>
