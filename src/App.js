@@ -1,17 +1,19 @@
-import logocompanie from "./logo_companie.jpeg";
-import logosite from "./logo_site.jpeg";
 import "./App.css";
-
+import Footer from "./components/Footer";
+import MainNavBar from "./components/MainNavBar";
+import { Routes } from 'react-router-dom';
+import { Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
 function App() {
   return (
     <div>
-      <header className="App-header">
-        <h1>Home Page AlphaFBase</h1>
-        <h3>Logo companie</h3>
-        <img src={logocompanie} className="App-logo" alt="logocompanie" />
-        <h3>Logo site</h3>
-        <img src={logosite} className="App-logo" alt="logosite" />
-      </header>
+      <MainNavBar />
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/services" element={<Services/>}/>
+      </Routes>
+      <Footer />
     </div>
   );
 }
