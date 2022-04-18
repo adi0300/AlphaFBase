@@ -1,0 +1,15 @@
+.form{
+    background-color: #E87121;
+    margin-left: 24rem;
+    margin-right: 24rem;
+}
+.action{
+    margin-top: 3rem;
+    margin-left: 15rem;
+    margin-right: 10rem;
+}
+.action button{
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
