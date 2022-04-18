@@ -10,3 +10,19 @@
     font-family: Arial;
     color: black;
 }
+.link{
+    margin-top: 2rem;
+    margin-left: 3rem;
+}
+.link a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-family: sans-serif;
+    background-color: #E87121;
+    border-radius: 60px;
+    padding: 4px;
+    padding-right: 16px;
+    padding-left: 16px;
+    overflow: hidden;
+}
