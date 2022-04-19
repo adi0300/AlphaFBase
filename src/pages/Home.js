@@ -20,18 +20,22 @@ const lista = [
 function Home() {
   return (
     <section className="sectiune">
-      <div>
+      <div className="double">
         <HomeTextListBox
-          title="Manage your football club the easy way"
+          className="single"
+          title="What are we offering"
           text1="Easier managing of the club"
           text2="Statistics about the squad's players"
           text3="Details about the staff members"
           text4="Wage management"
+          linktext="Find out more"
         />
 
         <HomeTextBox
+          className="single"
           text="Our website is dedicated to managing different administrative parts of a football club, especially to clubs from the lower leagues within Europe, but can also be used for amateur teams (“Sunday League”) or even minifootball teams."
-          title="What are we offering"
+          title="Manage your football club the easy way"
+          linktext="Get our services and create your account"
         />
       </div>
     </section>

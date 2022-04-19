@@ -1,4 +1,17 @@
-.sectiune{
-    border-bottom-style: solid;
-    border-bottom-color: black;
+.sectiune {
+  border-bottom-style: solid;
+  border-bottom-color: black;
+}
+
+.double {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  margin: 100px;
+  gap: 25%;
+}
+
+.single {
+  padding: 100px;
+  margin: 100px;
 }
