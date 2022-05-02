@@ -41,6 +41,13 @@ margin-bottom: 0.5rem;
     padding: 0.25rem;
 }
 
+.div select{
+    border-radius: 5px;
+    border-style: none;
+    border-color: white;
+    padding: 0.25rem;
+}
+
 .clear{
     clear: both;
 }

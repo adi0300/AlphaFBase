@@ -1,4 +1,5 @@
 import classes from './PaymentForm.module.css';
+
 function PaymentForm() {
     return(
     <div>
@@ -46,13 +47,18 @@ function PaymentForm() {
             </div>
             <div className={classes.clear}> </div>
             <div className={classes.div}>
-                <label htmlFor="cardtype">CARD TYPE</label>
-                <input type="text" required id="cardtype" />
+            <label htmlFor="cardtype">CARD TYPE</label>
+                <select required id="cardtype">
+                    <option value="Visa">Visa</option>
+                    <option value="Mastercard">Mastercard</option>
+                </select>
             </div>
             <div className={classes.div}>
                 <label htmlFor="validthrough">VALID THROUGH</label>
-                <input type="text" required id="validthrough" />
+                <input type="month" required id="validthrough" />
             </div>
+
+            <div className={classes.clear}></div>
             <div className={classes.div}>
                 <label htmlFor="cvccode">CVC CODE</label>
                 <input type="text" required id="cvccode" />
