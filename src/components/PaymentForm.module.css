@@ -2,14 +2,45 @@
     background-color: #E87121;
     margin-left: 24rem;
     margin-right: 24rem;
+    padding: 2rem;
 }
 .action{
     margin-top: 3rem;
-    margin-left: 15rem;
+    margin-left: 13rem;
     margin-right: 10rem;
 }
 .action button{
     background-color: black;
     color: white;
-    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    border-style: none;
+}
+
+
+.div{
+    padding-top: 3px;
+    padding-left: 12px;
+    padding-right: 7px;
+    padding-bottom: 2px;
+    float: left;
+}
+.div label{
+display: block;
+font-weight: lighter;
+margin-bottom: 0.5rem;
+}
+
+.div input{
+    border-radius: 5px;
+    border-style: none;
+    border-color: white;
+    padding: 0.25rem;
+}
+
+.clear{
+    clear: both;
 }

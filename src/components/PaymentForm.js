@@ -3,52 +3,61 @@ function PaymentForm() {
     return(
     <div>
         <form className={classes.form}>
-            <h4>
+            <p>
                 Customer information
-            </h4>
-            <div>
+            </p>
+            <div className={classes.clear}></div>
+            <div className={classes.div}>
                 <label htmlFor="firstname">FIRST NAME</label>
                 <input type="text" required id="firstname" />
             </div>
-            <div>
+            <div className={classes.div}>
                 <label htmlFor="lastname">LAST NAME</label>
                 <input type="text" required id="lastname" />
             </div>
-            <div>
+
+            <div className={classes.clear}> </div>
+
+            <div className={classes.div}>
                 <label htmlFor="email">EMAIL</label>
                 <input type="text" required id="email" />
             </div>
-            <div>
+        
+            <div className={classes.div}>
                 <label htmlFor="address">ADDRESS</label>
                 <input type="text" required id="address" />
             </div>
-            <div>
+            <div className={classes.div}>
                 <label htmlFor="country">COUNTRY</label>
                 <input type="text" required id="country" />
             </div>
-            <h4>
+            <div className={classes.clear}></div>
+            <p>
                 Payment details
-            </h4>
-            <div>
+            </p>
+            <div className={classes.clear}></div>
+            <div className={classes.div}>
                 <label htmlFor="cardnumber">CARD NUMBER</label>
                 <input type="text" required id="cardnumber" />
             </div>
-            <div>
+            <div className={classes.div}>
                 <label htmlFor="nameoncard">NAME ON CARD</label>
                 <input type="text" required id="nameoncard" />
             </div>
-            <div>
+            <div className={classes.clear}> </div>
+            <div className={classes.div}>
                 <label htmlFor="cardtype">CARD TYPE</label>
                 <input type="text" required id="cardtype" />
             </div>
-            <div>
+            <div className={classes.div}>
                 <label htmlFor="validthrough">VALID THROUGH</label>
                 <input type="text" required id="validthrough" />
             </div>
-            <div>
+            <div className={classes.div}>
                 <label htmlFor="cvccode">CVC CODE</label>
                 <input type="text" required id="cvccode" />
             </div>
+            <div className={classes.clear}></div>
             <div className={classes.action}>
                 <button>Pay</button>
             </div>
