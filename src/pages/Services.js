@@ -1,9 +1,17 @@
 import ServicesText from "../components/ServicesText";
 import classes from "./Services.module.css";
+import {NavLink} from 'react-router-dom';
 
 function Services() {
     return(
         <div>
+            <div className={classes.link}>
+            <NavLink
+                to="/payment"
+                >
+                Get our services and create your account
+            </NavLink>
+            </div>
             <p className={classes.righttitle} >Easier managing of the club</p>
             <ServicesText text="Apart from basic details about your club like name, year it was founded, league etc, 
             we also provide a system in which the club administrator can enter details about the players and the staff,
