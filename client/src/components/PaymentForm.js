@@ -1,4 +1,5 @@
 import classes from './PaymentForm.module.css';
+import {NavLink} from 'react-router-dom';
 
 function PaymentForm() {
     return(
@@ -65,7 +66,11 @@ function PaymentForm() {
             </div>
             <div className={classes.clear}></div>
             <div className={classes.action}>
+                <NavLink 
+                to="/register"
+                >
                 <button>Pay</button>
+                </NavLink>
             </div>
         </form>
     </div>
