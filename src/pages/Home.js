@@ -1,24 +1,11 @@
 import HomeTextBox from "../components/HomeTextBox";
 import HomeTextListBox from "../components/HomeTextListBox";
+import Tabel from "../components/Tabel";
 import "./Home.css";
-/*
-const lista = [
-  {
-    text: "Easier managing of the club",
-  },
-  {
-    text: "Statistics about the squad's players",
-  },
-  {
-    text: "Details about the staff members",
-  },
-  {
-    text: "Wage management",
-  },
-];
-*/
+
 function Home() {
   return (
+    <div>
     <section className="sectiune">
       <div className="double">
         <HomeTextListBox
@@ -39,6 +26,10 @@ function Home() {
         />
       </div>
     </section>
+    <section>
+      <Tabel/>
+    </section>
+    </div>
   );
 }
 
