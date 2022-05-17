@@ -1,0 +1,21 @@
+.link{
+    margin-top: 2rem;
+    margin-left: 30rem;
+    width: 420px;
+    height: 26px;
+}
+.link a{
+    background-color: #E87121;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-family: sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 60px;
+    padding: 4px;
+    padding-right: 16px;
+    padding-left: 16px;
+}
