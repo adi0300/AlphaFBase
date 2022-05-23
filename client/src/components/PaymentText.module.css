@@ -1,0 +1,13 @@
+.p{
+    color: #E87121;
+    font-family: sans-serif;
+    
+    width: 546px;
+    border-radius: 20px;
+    border-color: black;
+    border-width: 2px;
+    border-style: ridge;
+    padding-left: 16px;
+
+    margin-left: 24rem;
+}
