@@ -1,0 +1,32 @@
+.textsus{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    font-size: 36px;
+    font-family: sans-serif;
+}
+
+.imagine{
+    width:150px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    
+}
+
+.div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+
+}
+
+.tabel{
+    border: 509cm;
+    width: 733px;
+    height: 466px;
+    
+}

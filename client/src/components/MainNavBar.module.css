@@ -7,6 +7,7 @@
     background-color: white;
     border-bottom-style: solid;
     border-bottom-color: black;
+    justify-content: center;
 }
 
 .header ul{
@@ -32,5 +33,6 @@
    margin-left: 9rem;
    margin-right: 6rem;
    margin-top: 2rem;
+   
 }
 
