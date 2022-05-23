@@ -28,7 +28,16 @@ function MainNavBar(){
                 </NavLink>
             </li>
             <img src={logosite} className={classes.logo} alt="logosite" />
-            <li>LOGIN</li>
+            <li>
+            <NavLink
+                to="/login"
+                style={({ isActive }) => 
+                (isActive ? {background: 'rgba(232,113,33,.4)'} : {background: 'white'}
+                )}
+                >
+                    LOGIN
+                </NavLink>
+            </li>
             <li>CONTACT</li>
             </ul>
         </nav>
