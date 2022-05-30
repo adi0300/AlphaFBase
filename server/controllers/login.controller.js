@@ -10,6 +10,6 @@ function loginController(req,res,next) {
     console.log("Trying to login user");
 
     userService.login(req.body)
-    .then(user => user ? res.json(user) : res.status(400).json({message: "Credentials incorrect"}))
+    .then(token => token ? res.send(token) : res.status(400).json({message: "Credentials incorrect"}))
     .catch(err => next(err));
 }

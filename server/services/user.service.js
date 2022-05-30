@@ -22,7 +22,6 @@ async function login({username, password}) {
     if(user && password == user.password){
         const jwtoken = jwt.sign({sub: user.id}, config.secret, {expiresIn: '10d'});
         return{
-            ...user,
             jwtoken
         };
     }
