@@ -1,0 +1,66 @@
+.form{
+    background-color: #E87121;
+    margin-left: 24rem;
+    margin-right: 24rem;
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+.p{
+    margin-top: 4.5rem;
+    margin-left: 10rem;
+    margin-right: 12rem;
+    font-family: sans-serif;
+    font-size: 26px;
+    width:100%;
+}
+
+.div{
+    padding-top: 1rem;
+    padding-left: 2.5rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    float: left;
+}
+
+.div input{
+    border-radius: 3px;
+    border-style: none;
+    border-color: white;
+    padding-top: 0.7rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    padding-bottom: 0.7rem;
+}
+
+.image{
+    padding-top: 1rem;
+    padding-left: 2.5rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    float: left;
+}
+
+.image label{
+    margin-right: 0.5rem;
+    color:darkslategray;
+}
+
+.action{
+    margin-top: 3rem;
+    margin-left: 11rem;
+    margin-right: 10rem;
+    width: 100%;
+}
+.action button{
+    background-color: black;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: none;
+}
+.clear{
+    clear: both;
+}

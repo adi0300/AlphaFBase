@@ -9,7 +9,7 @@ function LoggedInNavBar(){
             <ul className={classes.navright}>
             <li>
                 <NavLink
-                to="/"
+                to="/homeloggedin"
                 style={({ isActive }) => 
                 (isActive ? {background: 'rgba(232,113,33,.4)'} : {background: 'white'}
                 )}
@@ -19,7 +19,7 @@ function LoggedInNavBar(){
             </li>
             <li>
             <NavLink
-                to="/services"
+                to="/addplayer"
                 style={({ isActive }) => 
                 (isActive ? {background: 'rgba(232,113,33,.4)'} : {background: 'white'}
                 )}
