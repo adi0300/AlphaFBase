@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom';
 
 function PaymentForm() {
     return(
-    <div>
+    <div className={classes.divmare}>
         <form className={classes.form}>
             <p>
                 Customer information

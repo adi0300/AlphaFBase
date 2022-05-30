@@ -1,7 +1,7 @@
 import classes from './PaymentText.module.css';
 function PaymentText(props) {
     return(
-        <div>
+        <div className={classes.divv}>
             <p className={classes.p}>{props.text}</p>
         </div>
     );
