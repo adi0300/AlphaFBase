@@ -2,10 +2,12 @@ import HomeTextBox from "../components/HomeTextBox";
 import HomeTextListBox from "../components/HomeTextListBox";
 import Tabel from "../components/Tabel";
 import "./Home.css";
+import MainNavBar from '../components/MainNavBar';
 
 function Home() {
   return (
     <div>
+      <MainNavBar/>
     <section className="sectiune">
       <div className="double">
         <HomeTextListBox

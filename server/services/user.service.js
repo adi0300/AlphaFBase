@@ -1,7 +1,11 @@
+const jwt = require('jsonwebtoken');
+const config = require('../config.json');
 const User = require('../models/user.model.js');
 
 module.exports = {
-register
+register,
+login,
+getByID
 };
 
 async function register(user){
@@ -11,4 +15,18 @@ async function register(user){
 
     const newUser = new User(user);
     await newUser.save();
+}
+
+async function login({username, password}) {
+    const user = await User.findOne({username});
+    if(user && password == user.password){
+        const jwtoken = jwt.sign({sub: user.id}, config.secret, {expiresIn: '10d'});
+        return{
+            jwtoken
+        };
+    }
+}
+
+async function getByID(id) {
+    return await User.findById(id);
 }

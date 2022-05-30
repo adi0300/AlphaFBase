@@ -4,12 +4,15 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
 
+//middleware not required quite yet
 
-const routes = require('./controllers/register.controller');
+const registerRoute = require('./controllers/register.controller');
+const loginRoute = require('./controllers/login.controller');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
+
 
 mongoose.connect(
 "mongodb+srv://User:parolauser@clusteralpha.p4a6i.mongodb.net/alphafbaseapp?retryWrites=true&w=majority"
@@ -18,7 +21,8 @@ mongoose.connect(
 .catch(err => console.error('Something went wrong', err));
 
 
-app.use('/api', routes);
+app.use('/api', registerRoute);
+app.use('/api/verify', loginRoute);
 
 
 app.listen(3001, ()=>{
