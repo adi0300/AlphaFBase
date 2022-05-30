@@ -9,37 +9,30 @@ const playerSchema = new Schema({
     },
     age: {
         type: Number,
-        unique: true,
         required: true,
     },
     position: {
         type: String,
-        unique: true,
         required:true,
     },
     goals: {
         type: Number,
-        unique: true,
         required:true,
     },
     assists: {
         type: Number,
-        unique: true,
         required:true,
     },
     contractlength: {
         type: String,
-        unique: true,
         required: true,
     },
     wage: {
         type: String,
-        unique: true,
         required:true,
     },
     username: {
         type: String,
-        unque: true,
         required:true,
     }
 });

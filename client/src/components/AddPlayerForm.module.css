@@ -33,17 +33,14 @@
     padding-bottom: 0.7rem;
 }
 
-.image{
-    padding-top: 1rem;
-    padding-left: 2.5rem;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
-    float: left;
-}
-
-.image label{
-    margin-right: 0.5rem;
-    color:darkslategray;
+.div select{
+    border-radius: 3px;
+    border-style: none;
+    border-color: white;
+    padding-top: 0.7rem;
+    padding-left: 0.4rem;
+    padding-right: 5.5rem;
+    padding-bottom: 0.7rem;
 }
 
 .action{
@@ -60,6 +57,12 @@
     padding-top: 10px;
     padding-bottom: 10px;
     border-style: none;
+}
+
+.message{
+    margin-top: 1.5rem;
+    color: black;
+    font-size: 20px;
 }
 .clear{
     clear: both;
