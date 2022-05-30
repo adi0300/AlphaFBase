@@ -1,6 +1,10 @@
+import LoggedInNavBar from "../components/LoggedInNavBar";
 function HomeLoggedIn(){
     return(
-        <div>Logged In Home</div>
+        <div>
+            <LoggedInNavBar/>
+            Logged In Home
+            </div>
     );
 }
 

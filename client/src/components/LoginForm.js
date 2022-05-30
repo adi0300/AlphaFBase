@@ -1,12 +1,13 @@
 import classes from "./LoginForm.module.css";
 import {useState} from 'react';
 import Axios from 'axios';
+
 function LoginForm(){
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
-    const loginUser = () =>{
-        Axios.post("http://localhost:3001/api/verify/login", {
+    const loginUser =  () =>{
+          Axios.post("http://localhost:3001/api/verify/login", {
             username,
             password
         }).then((response) =>{
@@ -15,7 +16,7 @@ function LoginForm(){
             localStorage.setItem("token", Object.values(tokenObj));
             localStorage.setItem("id", Object.values(idObj));
             localStorage.setItem("username", username);
-            window.location = "/homeloggedin";
+            window.location.replace("/homeloggedin");
         }).catch( (error) =>{
             console.log(error.response.data.message);
             console.log("not good");
@@ -24,7 +25,7 @@ function LoginForm(){
 
     return(
         <div>
-            <form className={classes.form}>
+            <form className={classes.form} onSubmit={loginUser}>
                 <p className={classes.p}>Sign In</p>
 
                 <div className={classes.div}>
@@ -40,7 +41,7 @@ function LoginForm(){
                 </div>
 
                 <div className={classes.action}>
-                    <button onClick={loginUser}>SIGN IN</button>
+                    <button >SIGN IN</button>
                 </div>
             </form>
         </div>
