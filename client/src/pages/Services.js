@@ -1,10 +1,12 @@
 import ServicesText from "../components/ServicesText";
 import classes from "./Services.module.css";
 import {NavLink} from 'react-router-dom';
+import MainNavBar from '../components/MainNavBar';
 
 function Services() {
     return(
         <div>
+            <MainNavBar/>
             <div className={classes.link}>
             <NavLink
                 to="/payment"
