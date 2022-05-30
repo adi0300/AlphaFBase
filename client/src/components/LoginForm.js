@@ -2,27 +2,27 @@ import classes from "./LoginForm.module.css";
 import {useState} from 'react';
 import Axios from 'axios';
 
-function LoginForm(){
+const LoginForm = () =>{
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
-    const loginUser =  () =>{
-          Axios.post("http://localhost:3001/api/verify/login", {
-            username,
-            password
-        }).then((response) =>{
-            const tokenObj = response.data;
-            const idObj = response.data.id;
+    const loginUser = async (e) =>{
+        e.preventDefault();
+        try{
+            const res = await Axios.post("http://localhost:3001/api/verify/login", {
+                username,
+                password
+            });
+            const tokenObj = res.data;
             localStorage.setItem("token", Object.values(tokenObj));
-            localStorage.setItem("id", Object.values(idObj));
             localStorage.setItem("username", username);
-            window.location.replace("/homeloggedin");
-        }).catch( (error) =>{
-            console.log(error.response.data.message);
+            window.location= "/homeloggedin";
+        }
+        catch(err){
+            console.log(err.message);
             console.log("not good");
-        });
-    };
-
+    }
+};
     return(
         <div>
             <form className={classes.form} onSubmit={loginUser}>
@@ -41,7 +41,7 @@ function LoginForm(){
                 </div>
 
                 <div className={classes.action}>
-                    <button >SIGN IN</button>
+                    <button type="submit">SIGN IN</button>
                 </div>
             </form>
         </div>
