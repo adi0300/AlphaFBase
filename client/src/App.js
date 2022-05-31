@@ -9,6 +9,7 @@ import Payment from "./pages/Payment";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import HomeLoggedIn from "./pages/HomeLoggedIn";
+import AddPlayer from "./pages/AddPlayer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/homeloggedin" element={<HomeLoggedIn/>}/>
+        <Route path="/addplayer" element={<AddPlayer/>}/>
       </Routes>
       <Footer />
     </div>

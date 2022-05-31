@@ -8,6 +8,7 @@ const mongoose = require("mongoose");
 
 const registerRoute = require('./controllers/register.controller');
 const loginRoute = require('./controllers/login.controller');
+const addPlayerRoute = require('./controllers/addplayer.controller');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -23,6 +24,7 @@ mongoose.connect(
 
 app.use('/api', registerRoute);
 app.use('/api/verify', loginRoute);
+app.use('/api/players', addPlayerRoute);
 
 
 app.listen(3001, ()=>{
