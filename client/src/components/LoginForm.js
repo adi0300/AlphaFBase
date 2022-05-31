@@ -5,7 +5,7 @@ import Axios from 'axios';
 const LoginForm = () =>{
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-
+    const [message, setMessage] = useState("");
     const loginUser = async (e) =>{
         e.preventDefault();
         try{
@@ -13,6 +13,7 @@ const LoginForm = () =>{
                 username,
                 password
             });
+            setMessage("");
             const tokenObj = res.data;
             localStorage.setItem("token", Object.values(tokenObj));
             localStorage.setItem("username", username);
@@ -20,7 +21,7 @@ const LoginForm = () =>{
         }
         catch(err){
             console.log(err.message);
-            console.log("not good");
+            setMessage("Username or password not correct");
     }
 };
     return(
@@ -43,6 +44,7 @@ const LoginForm = () =>{
                 <div className={classes.action}>
                     <button type="submit">SIGN IN</button>
                 </div>
+                {message && <div className={classes.message}>{message}</div>}
             </form>
         </div>
     );

@@ -65,6 +65,11 @@
     text-align: center;
     border-style: none;
 }
+.message{
+    margin-top: 1.5rem;
+    color: black;
+    font-size: 20px;
+}
 .clear{
     clear: both;
 }
