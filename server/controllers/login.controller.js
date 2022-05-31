@@ -12,6 +12,7 @@ function loginController(req,res,next) {
     userService.login(req.body)
     .then( (token) => {
        if(token){
+           res.cookie("token",token);
            res.send(token);
            console.log("Successful login");
            console.log(token);
@@ -20,7 +21,5 @@ function loginController(req,res,next) {
            console.log("Not successful login");
            console.log(token);
        }
-     //res.send(token) 
-   // : res.status(400).json({message: "Credentials incorrect"})
     }).catch(err => next(err));
 }

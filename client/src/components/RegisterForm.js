@@ -2,27 +2,27 @@ import classes from './RegisterForm.module.css';
 import {useState} from 'react';
 import Axios from 'axios';
 
-function RegisterForm(){
-    const setUserList = useState([]);
+const RegisterForm = () =>{
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [clubname, setClubname] = useState("");
     const [password, setPassword] = useState("");
+    const [message, setMessage] = useState("");
 
-    const registerUser = () =>{
-        Axios.post("http://localhost:3001/api/register", {
-            username,
-            email,
-            clubname,
-            password
-        }).then((response) =>{
-            setUserList([ {
+    const registerUser = async(e) =>{
+        e.preventDefault();
+        try{
+            await Axios.post("http://localhost:3001/api/register", {
                 username,
                 email,
                 clubname,
                 password
-            }])
-        });
+            });
+            setMessage("");
+            window.location = "/login";
+        }catch(err){
+            setMessage("Could not register");
+        }
     };
 
     return(
@@ -68,6 +68,7 @@ function RegisterForm(){
                 <div className={classes.action}>
                     <button onClick={registerUser}>SIGN UP</button>
                 </div>
+                {message && <div className={classes.message}>{message}</div>}
             </form>
         </div>
     );

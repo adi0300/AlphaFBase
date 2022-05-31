@@ -30,7 +30,7 @@ function LoggedInNavBar(){
             <img src={logosite} className={classes.logo} alt="logosite" />
             <li>
             <NavLink
-                to="/login"
+                to="/logout"
                 style={({ isActive }) => 
                 (isActive ? {background: 'rgba(232,113,33,.4)'} : {background: 'white'}
                 )}

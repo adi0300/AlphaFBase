@@ -8,6 +8,7 @@ import Services from "./pages/Services";
 import Payment from "./pages/Payment";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import Logout from "./pages/Logout";
 import HomeLoggedIn from "./pages/HomeLoggedIn";
 import AddPlayer from "./pages/AddPlayer";
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/payment" element={<Payment/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path="/logout" element={<Logout/>}/>
         <Route path="/homeloggedin" element={<HomeLoggedIn/>}/>
         <Route path="/addplayer" element={<AddPlayer/>}/>
       </Routes>
