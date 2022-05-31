@@ -1,6 +1,18 @@
 import classes from "./HomeLoggedInTable.module.css";
+import {useState, useEffect} from 'react';
+import Axios from 'axios';
 
 function HomeLoggedInTable(props) {
+  const [playersList, setPlayersList] = useState([]);
+  const username = localStorage.getItem("username");
+
+  useEffect( () => {
+    Axios.get("http://localhost:3001/api/players/getplayers")
+    .then( (res) => {
+      setPlayersList(res.data);
+    })
+  }, []);
+
   return (
     <div>
       <div className={classes.titluclub}>
@@ -21,24 +33,20 @@ function HomeLoggedInTable(props) {
               </tr>
             </thead>
             <tbody>
+            { playersList.filter(player => player.username === username)
+                         .map((player) => {
+            return(
               <tr>
-                <td>{props.name}</td>
-                <td>{props.age}</td>
-                <td>{props.position}</td>
-                <td>{props.goals}</td>
-                <td>{props.assists}</td>
-                <td>{props.contract}</td>
-                <td>{props.wage}</td>
+                <td>{player.name}</td>
+                <td>{player.age}</td>
+                <td>{player.position}</td>
+                <td>{player.goals}</td>
+                <td>{player.assists}</td>
+                <td>{player.contractlength}</td>
+                <td>{player.wage} lei</td>
               </tr>
-              <tr>
-                <td>x</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
+            )
+         })}
             </tbody>
           </table>
         </div>
