@@ -1,0 +1,7 @@
+.double {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin: 100px;
+    gap: 25%;
+  }
