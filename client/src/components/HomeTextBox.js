@@ -1,5 +1,5 @@
 import classes from "./HomeTextBox.module.css";
-
+import {NavLink} from 'react-router-dom';
 function HomeTextBox(props) {
   return (
     <div>
@@ -8,7 +8,11 @@ function HomeTextBox(props) {
         <p className={classes.ptext}>{props.text}</p>
       </div>
       <div className={classes.link}>
-        <p >{props.linktext}</p>
+        <p >
+        <NavLink to="/payment">
+                    {props.linktext}
+                </NavLink>
+        </p>
       </div>
     </div>
   );

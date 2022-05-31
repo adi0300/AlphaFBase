@@ -1,5 +1,5 @@
 import classes from "./HomeTextListBox.module.css";
-
+import {NavLink} from 'react-router-dom';
 function HomeTextListBox(props) {
   return (
     <div>
@@ -17,7 +17,11 @@ function HomeTextListBox(props) {
         </div>
       </div>
       <div className={classes.link}>
-        <p>{props.linktext}</p>
+        <p>
+        <NavLink to="/services" >
+                    {props.linktext}
+                </NavLink>
+        </p>
       </div>
     </div>
   );

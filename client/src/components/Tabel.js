@@ -1,6 +1,16 @@
 import classes from "./Tabel.module.css";
-
+import {useState, useEffect} from 'react';
+import Axios from 'axios';
 function Tabel(props) {
+  const [clubList, setClubList] = useState([]);
+
+  useEffect( () => {
+    Axios.get("http://localhost:3001/api/get/clublisthome")
+    .then( (res) => {
+      setClubList(res.data);
+    })
+  }, []);
+
   return (
     <div>
       <div className={classes.textsus}>
@@ -11,20 +21,19 @@ function Tabel(props) {
         <table border="2" className={classes.tabel} >
           <colgroup span="4"></colgroup>
           <tr>
-            <th>Logo</th>
             <th>Name</th>
+            <th>Club administrator email</th>
             <th>Since</th>
           </tr>
-          <tr >
-            <td><img className={classes.imagine} alt="poza" src="https://upload.wikimedia.org/wikipedia/ro/thumb/5/53/Arsenal_FC.svg/1200px-Arsenal_FC.svg.png"/></td>
-            <td>{props.nume}</td>
-            <td>{props.data}</td>
-          </tr>
-          <tr>
-            <td>a</td>
-            <td></td>
-            <td> </td>
-          </tr>
+          {clubList.map( (clubl) => {
+            return(
+              <tr>
+                <td>{clubl.clubname}</td>
+                <td>{clubl.email}</td>
+                <td>2022</td>
+              </tr>
+            )
+          })}
         </table>
       </div>
     </div>

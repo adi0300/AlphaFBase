@@ -5,7 +5,8 @@ const User = require('../models/user.model.js');
 module.exports = {
 register,
 login,
-getByID
+getByID,
+getClubList
 };
 
 async function register(user){
@@ -29,4 +30,8 @@ async function login({username, password}) {
 
 async function getByID(id) {
     return await User.findById(id);
+}
+
+async function getClubList() {
+    return await User.find({});
 }

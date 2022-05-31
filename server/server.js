@@ -10,6 +10,7 @@ const registerRoute = require('./controllers/register.controller');
 const loginRoute = require('./controllers/login.controller');
 const logoutRoute = require('./controllers/logout.controller');
 const addPlayerRoute = require('./controllers/addplayer.controller');
+const getClubListRoute = require('./controllers/getclublist.controller');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -27,7 +28,7 @@ app.use('/api', registerRoute);
 app.use('/api/verify', loginRoute);
 app.use('/api/out', logoutRoute);
 app.use('/api/players', addPlayerRoute);
-
+app.use('/api/get', getClubListRoute);
 
 app.listen(3001, ()=>{
     console.log("First run of the server");
