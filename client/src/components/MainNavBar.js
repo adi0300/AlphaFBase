@@ -38,7 +38,16 @@ function MainNavBar(){
                     LOGIN
                 </NavLink>
             </li>
-            <li>CONTACT</li>
+            <li>
+            <NavLink
+                to="/contact"
+                style={({ isActive }) => 
+                (isActive ? {background: 'rgba(232,113,33,.4)'} : {background: 'white'}
+                )}
+                >
+                    CONTACT
+                </NavLink>
+            </li>
             </ul>
         </nav>
         </header>

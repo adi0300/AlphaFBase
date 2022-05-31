@@ -1,0 +1,21 @@
+.divv{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p{
+    color: #E87121;
+    font-family: sans-serif;
+    margin-left: 3rem;
+    margin-right: 14rem;
+    margin-bottom: 10rem;
+    margin-top: 10rem;
+    width: 25%;
+}
+
+.email{
+    color: #E87121;
+    width: 25%;
+    height: 75%;
+}

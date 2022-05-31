@@ -9,6 +9,7 @@ import Payment from "./pages/Payment";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Logout from "./pages/Logout";
+import Contact from "./pages/Contact";
 import HomeLoggedIn from "./pages/HomeLoggedIn";
 import AddPlayer from "./pages/AddPlayer";
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/logout" element={<Logout/>}/>
+        <Route path="/contact" element={<Contact/>}/>
         <Route path="/homeloggedin" element={<HomeLoggedIn/>}/>
         <Route path="/addplayer" element={<AddPlayer/>}/>
       </Routes>
