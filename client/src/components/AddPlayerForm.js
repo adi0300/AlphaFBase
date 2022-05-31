@@ -14,11 +14,12 @@ const AddPlayerForm = () =>{
     const [username, setUsername] = useState("");
     const [message, setMessage] = useState("");
 
+
     const addPlayer = async(e) =>{
         e.preventDefault();
+        const localusername = localStorage.getItem("username");
+        setUsername(localusername);
         try{
-            const localusername = localStorage.getItem("username");
-            setUsername(localusername);
             await Axios.post("http://localhost:3001/api/players/addplayer", {
                 name,
                 age,

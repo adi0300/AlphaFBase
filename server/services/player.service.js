@@ -1,7 +1,8 @@
 const Player = require('../models/player.model.js');
 
 module.exports = {
-    addPlayer
+    addPlayer,
+    getPlayers
 };
 
 async function addPlayer(player){
@@ -11,5 +12,9 @@ async function addPlayer(player){
 
     const newPlayer = new Player(player);
     await newPlayer.save();
+}
+
+async function getPlayers(){
+    return await Player.find({});
 }
 
