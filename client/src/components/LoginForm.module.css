@@ -26,6 +26,14 @@
     padding-bottom: 1rem;
 }
 
+.divmare{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
 .div input{
     border-radius: 3px;
     border-style: none;

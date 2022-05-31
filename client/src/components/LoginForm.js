@@ -24,7 +24,7 @@ const LoginForm = () =>{
     }
 };
     return(
-        <div>
+        <div className={classes.divmare}>
             <form className={classes.form} onSubmit={loginUser}>
                 <p className={classes.p}>Sign In</p>
 

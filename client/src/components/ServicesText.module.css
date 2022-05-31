@@ -1,6 +1,7 @@
 .div{
     border-bottom-style: solid;
     border-bottom-color: black;
+    
 }
 
 .p{
@@ -9,4 +10,5 @@
     margin-right: 42rem;
     margin-left: 12rem;
     margin-bottom: 3rem;
+    width: 25%;
 }

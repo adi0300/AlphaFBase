@@ -1,28 +1,32 @@
-.righttitle{
-    margin-left: 48rem;
-    font-size: 30px;
-    font-family: Arial;
-    color: black;
+.righttitle {
+  margin-left: 48rem;
+  font-size: 30px;
+  font-family: Arial;
+  color: black;
 }
 
-.lefttitle{
-    font-size: 30px;
-    font-family: Arial;
-    color: black;
+.lefttitle {
+  font-size: 30px;
+  font-family: Arial;
+  color: black;
 }
-.link{
-    margin-top: 2rem;
-    margin-left: 3rem;
+.link {
+  margin-top: 2rem;
+  margin-left: 3rem;
 }
-.link a{
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-    font-family: sans-serif;
-    background-color: #E87121;
-    border-radius: 60px;
-    padding: 4px;
-    padding-right: 16px;
-    padding-left: 16px;
-    overflow: hidden;
+
+.test {
+  text-align: center;
+}
+.link a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-family: sans-serif;
+  background-color: #e87121;
+  border-radius: 60px;
+  padding: 4px;
+  padding-right: 16px;
+  padding-left: 16px;
+  overflow: hidden;
 }
