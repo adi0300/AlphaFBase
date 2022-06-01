@@ -6,7 +6,7 @@
 
 .paragraph{
   font-family: sans-serif;
-  font-size: 28px;
+  font-size: 22px;
   text-align: center;
 
   width: 806px;
@@ -24,4 +24,8 @@
 }
 .buton{
     margin:10px;
+    text-decoration: none;
+}
+.buton a{
+    text-decoration: none;
 }

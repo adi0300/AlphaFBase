@@ -26,7 +26,7 @@ const RegisterForm = () =>{
     };
 
     return(
-        <div>
+        <div className={classes.divmare}>
             <form className={classes.form}>
                 <p className={classes.p}>
                     Register
