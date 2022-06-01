@@ -4,12 +4,18 @@ import Axios from 'axios';
 
 function HomeLoggedInDesc(props) {
   const [clubList, setClubList] = useState([]);
+  const [clubDetails, setClubDetails] = useState([]);
   const username = localStorage.getItem("username");
 
   useEffect( () => {
     Axios.get("http://localhost:3001/api/get/clublisthome")
     .then( (res) => {
       setClubList(res.data);
+    })
+
+    Axios.get("http://localhost:3001/api/clubs/getclubdetails")
+    .then( (res) => {
+      setClubDetails(res.data);
     })
   }, []);
 
@@ -25,11 +31,18 @@ function HomeLoggedInDesc(props) {
       </div>
       <div className={classes.chestii}>
         <div className={classes.paragraph}>
-          <h6>Founded in: 2018</h6>
-          <h6>Location: Barsana</h6>
-          <h6>Current season: 2021-2022</h6>
-          <h6>League table position: 10</h6>
-          <h6>Manager: Dorinel Munteanu</h6>
+        { clubDetails.filter(club => club.username === username)
+                         .map((club) => {
+            return(
+              <div>
+              <h6>Founded in: {club.year}</h6>
+              <h6>Location: {club.location}</h6>
+              <h6>Current season: {club.season}</h6>
+              <h6>League table position: {club.position}</h6>
+              <h6>Manager: {club.year}</h6>
+              </div>
+            )
+         })}
         </div>
 
         <div >
