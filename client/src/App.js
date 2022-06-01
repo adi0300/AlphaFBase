@@ -12,6 +12,7 @@ import Logout from "./pages/Logout";
 import Contact from "./pages/Contact";
 import HomeLoggedIn from "./pages/HomeLoggedIn";
 import AddPlayer from "./pages/AddPlayer";
+import EditClubDetails from "./components/EditClubDetails";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/homeloggedin" element={<HomeLoggedIn/>}/>
         <Route path="/addplayer" element={<AddPlayer/>}/>
+        <Route path="/editclubdetails" element={<EditClubDetails/>}/>
       </Routes>
       <Footer />
     </div>

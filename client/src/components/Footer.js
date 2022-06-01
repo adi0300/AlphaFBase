@@ -1,10 +1,11 @@
 import "../App.css";
+import classes from './Footer.module.css';
 
 function Footer() {
   return (
     <div>
-      <footer className="App-footer">
-        <h1>Sanatate numa bine!</h1>
+      <footer className={classes.footer}>
+        <h3> © 2022 Socceroos AA</h3>
       </footer>
     </div>
   );

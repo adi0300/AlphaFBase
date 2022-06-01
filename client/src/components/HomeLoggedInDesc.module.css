@@ -24,4 +24,8 @@
 }
 .buton{
     margin:10px;
+    text-decoration: none;
+}
+.buton a{
+    text-decoration: none;
 }

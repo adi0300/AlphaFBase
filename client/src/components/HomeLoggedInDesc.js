@@ -1,5 +1,6 @@
 import classes from "./HomeLoggedInDesc.module.css";
 import {useState, useEffect} from 'react';
+import {NavLink} from 'react-router-dom';
 import Axios from 'axios';
 
 function HomeLoggedInDesc(props) {
@@ -46,7 +47,11 @@ function HomeLoggedInDesc(props) {
         </div>
 
         <div >
-          <button className={classes.buton}>Edit</button>
+          <button className={classes.buton}>
+          <NavLink to="/editclubdetails">
+                    Edit
+                </NavLink>
+          </button>
         </div>
       </div>
     </div>
